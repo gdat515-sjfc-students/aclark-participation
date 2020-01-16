@@ -1,7 +1,7 @@
 ## Good Visual
 
-![Good
-Visual](/Users/aclark/Documents/GitHub/GDAT515/aclark-participation/Assignment%201/Good_viz.png)
+![Good Visual](Good_viz.png)
+[Tweet](https://twitter.com/darenw/status/993156750344904704?s=20)
 
 This visual was created by the Director of Research for the MLB. He does
 a lot of cool visuals when milestones happen in the MLB. This particular
@@ -23,8 +23,7 @@ defenders.
 
 ## Bad Visual
 
-![Bad
-Visual](/Users/aclark/Documents/GitHub/GDAT515/aclark-participation/Assignment%201/bad_viz.jpg)
+![Bad Visual](bad_viz.jpg)
 
 This visual is historically bad. This was used by the Florida Law
 Enforcement. They were trying to prove that the number of murders

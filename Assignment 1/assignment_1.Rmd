@@ -14,7 +14,10 @@ library(webshot2)
 
 ## Good Visual
 
-![Good Visual](/Users/aclark/Documents/GitHub/GDAT515/aclark-participation/Assignment 1/Good_viz.png)
+![Good Visual](Good_viz.png)
+[Tweet](https://twitter.com/darenw/status/993156750344904704?s=20)
+
+
 
 This visual was created by the Director of Research for the MLB. He does a lot of cool visuals when milestones happen in the MLB. This particular visual was created after Ichiro Suzuki retired. He ended his career 23rd all-time in career hits. Daren plotted all 3,089 of Ichiro's hits. 
 
@@ -23,7 +26,7 @@ I think this visual works a many levels. I think the animation of the hits shows
 
 ## Bad Visual
 
-![Bad Visual](/Users/aclark/Documents/GitHub/GDAT515/aclark-participation/Assignment 1/bad_viz.jpg)
+![Bad Visual](bad_viz.jpg)
 
 This visual is historically bad. This was used by the Florida Law Enforcement. They were trying to prove that the number of murders committed by firearms had increased since the 1990's. This graph was indeed published by Reuters, and the author said she was trying out a method of visualization she saw of deaths in Iraq, symbolizing dripping blood.
 
