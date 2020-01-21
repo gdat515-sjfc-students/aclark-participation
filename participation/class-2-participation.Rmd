@@ -1,0 +1,110 @@
+---
+title: "class-2_participation"
+output: 
+  md_document:
+    variant: gfm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 999)
+```
+
+```{r, include=FALSE}
+library(gapminder)
+library(tidyverse)
+library(ggthemes)
+```
+
+```{r}
+data("gapminder")
+
+str(gapminder)
+```
+
+```{r}
+ggplot(data = gapminder, mapping = aes(x = year, y = pop, color = continent)) +
+  geom_point()
+```
+
+```{r}
+gapminder %>% 
+  group_by(year, continent) %>%
+  summarise(pop = sum(pop)) %>%
+ggplot(data = ., mapping = aes(x = year, y = pop, color = continent)) +
+  geom_point() +
+  scale_y_log10()
+```
+
+```{r}
+
+gapminder %>%
+  filter(continent == "Asia") %>%
+ggplot(data = ., aes(x = year, y = gdpPercap, color = country)) +
+  geom_point() +
+  facet_wrap(~continent)
+
+```
+
+try tow numeric values
+```{r}
+ggplot(gapminder, aes(gdpPercap, lifeExp, color = continent, size = pop)) +
+  geom_point() +
+  scale_x_log10() +
+  stat_smooth(method = "lm")
+```
+
+Changing mapping fo population
+
+```{r}
+gapminder %>%
+  filter(continent == "Americas") %>%
+  group_by(country) %>%
+  summarise(gdpPercap = mean(gdpPercap),
+            lifeExp = mean(lifeExp)) %>%
+ggplot(., aes(gdpPercap, lifeExp, color = country)) +
+  geom_point() +
+  scale_x_log10() +
+  stat_smooth(method = "lm")
+```
+
+```{r}
+ggplot(gapminder,aes(gdpPercap,lifeExp)) +
+  geom_point(aes(color = continent), alpha = .15) + 
+  scale_x_log10() +
+  stat_smooth(method = "lm")
+```
+
+
+```{r}
+ggplot(gapminder,aes(gdpPercap,lifeExp)) +
+  geom_point(alpha = .55) + 
+  scale_x_log10() +
+  stat_smooth(method = "lm") +
+  facet_wrap(~continent) +
+  ggtitle("Life Expectancy By GDP Per Capita", subtitle = "Faceted by Continent") +
+  xlab("GDP Per Capita") +
+  ylab("Life Expectancy") 
+
+```
+
+
+
+```{r}
+ggplot(gapminder,aes(continent,lifeExp)) +
+  stat_summary(fun.ymin =  min,
+               fun.ymax =  max,
+               fun.y = median) +
+  geom_point() +
+  coord_flip() +
+  theme_economist_white() 
+```
+
+```{r}
+
+```
+
+
+
+
+
