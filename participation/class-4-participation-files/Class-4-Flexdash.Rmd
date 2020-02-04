@@ -1,0 +1,47 @@
+---
+title: "Class_4_Participation"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(shiny)
+library(ggplot2)
+library(knitr)
+```
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+mtcars <- mtcars
+mtcars$type <- rownames(mtcars)
+
+ggplot(data = mtcars, aes(x=wt, y=mpg)) +
+  geom_point()
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+mt_table <- mtcars %>% arrange(wt,mpg)
+kable(mt_table)
+```
+
+### Chart C
+
+```{r}
+
+```
+
